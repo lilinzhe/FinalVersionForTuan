@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVC">
+            <connections>
+                <outlet property="mapV" destination="czK-Z2-YQp" id="581-4i-5CV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="czK-Z2-YQp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Osl-xO-wAB"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-qZ-VDv">
+                    <rect key="frame" x="20" y="510" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="VTi-SF-QkK"/>
+                        <constraint firstAttribute="height" constant="70" id="WpP-KG-tgB"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="icon_map_location">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="icon_map_location_highlighted"/>
+                    <connections>
+                        <action selector="clickLocationButton:" destination="-1" eventType="touchUpInside" id="aOS-4m-2m7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7CA-qZ-VDv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="0qG-9G-dBD"/>
+                <constraint firstAttribute="bottom" secondItem="czK-Z2-YQp" secondAttribute="bottom" id="C9Q-KY-KOt"/>
+                <constraint firstAttribute="trailing" secondItem="czK-Z2-YQp" secondAttribute="trailing" id="GDe-N5-Tw8"/>
+                <constraint firstItem="czK-Z2-YQp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gzu-1a-3ed"/>
+                <constraint firstAttribute="bottom" secondItem="7CA-qZ-VDv" secondAttribute="bottom" constant="20" id="ITH-zp-Vg2"/>
+                <constraint firstItem="czK-Z2-YQp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cHA-Gf-VlU"/>
+            </constraints>
+            <point key="canvasLocation" x="93" y="312"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_map_location" width="70" height="70"/>
+        <image name="icon_map_location_highlighted" width="70" height="70"/>
+    </resources>
+</document>
